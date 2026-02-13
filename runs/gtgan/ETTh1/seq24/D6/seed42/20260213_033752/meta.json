@@ -1,0 +1,38 @@
+{
+  "model": "GT-GAN",
+  "impl": "GTGAN_stocks.py (runtime patched)",
+  "dataset": "ETTh1",
+  "csv": "D:\\TimeSeries-Generative-Modeling-RnD\\data\\ETT-small\\ETTh1.csv",
+  "features": [
+    "HUFL",
+    "HULL",
+    "MUFL",
+    "MULL",
+    "LUFL",
+    "LULL"
+  ],
+  "seq_len": 24,
+  "D": 6,
+  "seed": 42,
+  "epochs": 1,
+  "batch_size": 128,
+  "max_steps": 300,
+  "max_steps_metric": 3,
+  "splits": {
+    "train": [
+      0,
+      8640
+    ],
+    "val": [
+      8616,
+      11520
+    ],
+    "test": [
+      11496,
+      14400
+    ],
+    "T": 17420,
+    "D": 6
+  },
+  "notes": "Train/test windows scaled using TRAIN only; time-channel appended as last dim."
+}
